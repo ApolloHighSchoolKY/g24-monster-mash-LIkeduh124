@@ -20,7 +20,16 @@ public class MonsterMash{
     System.out.println(((Witch)sally).fly());
 
     //Declare a Monster of our new Type
+    Monster jojo = new Jormungandr("jojo");
+
+    System.out.println(jojo.kill());
     //Declare your new Type of Monster
+    Jormungandr jaja = new Jormungandr("jaja");
+    
+    System.out.println(jaja.venom());
+
     //Bonus challenge: Add an instance field
+    jaja.setFang(200);
+    System.out.println(jaja.getFang());
   }
 }
