@@ -31,5 +31,16 @@ public class MonsterMash{
     //Bonus challenge: Add an instance field
     jaja.setFang(200);
     System.out.println(jaja.getFang());
+
+
+    //In class stuff
+
+    Skeleton johnny = new Skeleton();
+
+    System.out.println(johnny);
+
+    johnny = new Skeleton("Giant Johnny");
+
+    System.out.println(johnny);
   }
 }

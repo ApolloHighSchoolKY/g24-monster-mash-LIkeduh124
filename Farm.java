@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * @(#)Farm.java
  *
@@ -9,9 +11,18 @@
 
 public class Farm {
 
-    public Farm() {
-    	Cow moo = new Cow();
+    public static void main(String[] args){
+        ArrayList<Animal> barn = new ArrayList<Animal>();
 
+        for (Animal cuz : barn) 
+        {
+            System.out.println(cuz.speak());
+
+            if(cuz.getAge()>10)
+            {
+                cuz.kill();
+            }
+        }
     }
 
 
