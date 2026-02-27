@@ -14,23 +14,29 @@
 public class Cow extends Animal
 {
 
-    private double milkProduced = 0;
+    private double milkProduced;
 
     public Cow()
     {
-        super(0, true, "Moo");
+        super("Moo");
+        milkProduced = 0;
     }
 
     public Cow(int age, boolean alive, String sound){
-        super(age, alive, sound);
+        super(sound);
+        
     }
 
     public String speak(){
-        return "Moo";
+        return "The cow says " + super.speak();
     }
 
     public String toString(){
-        return super.toString() + " and has produced " + milkProduced + " gallons of milk";
+        if(super.isAlive()){
+            return super.toString() + "\nMilk Produced: " + milkProduced;
+        }
+
+        return "The cow lived to be " + super.getAge() + " years old. RIP\n Milk produced: " + milkProduced;
     }
 
     public void eat()

@@ -22,15 +22,13 @@ public class Animal
 	     */
 	    public Animal()
 	    {
-			age = 0;
-			alive = true;
-			sound = "";
+			this("Sound");
 
 	    }
 
-		public Animal(int age, boolean alive, String sound){
-			this.age = age;
-			this.alive = alive;
+		public Animal(String sound){
+			age = 0;
+			alive = true;
 			this.sound = sound;
 		}
 
@@ -68,7 +66,7 @@ public class Animal
      	*/
      	public String speak()
      	{
-     		return sound;
+     		return "" + sound;
      	}
 
      	/**
