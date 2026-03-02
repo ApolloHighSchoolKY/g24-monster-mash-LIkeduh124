@@ -52,12 +52,14 @@ public class Animal
      	*/
      	public void kill()
      	{
+			
 			alive = false;
      	}
 
-		public void eat()
+		public String eat()
 		{
 			age++;
+			return "The animal ate.";
 		}
 
      	/**

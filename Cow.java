@@ -39,10 +39,16 @@ public class Cow extends Animal
         return "The cow lived to be " + super.getAge() + " years old. RIP\n Milk produced: " + milkProduced;
     }
 
-    public void eat()
+    public String produceMilk(int x){
+        milkProduced += x;
+        return "The cow produced " + x + " more milk.";
+    }
+
+    public String eat()
     {
         super.eat();
-        milkProduced++;
+        milkProduced+= 10;
+        return "The cow ate and produced milk.";
     }
 
 }

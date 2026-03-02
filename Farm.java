@@ -12,17 +12,28 @@ import java.util.ArrayList;
 public class Farm {
 
     public static void main(String[] args){
-        ArrayList<Animal> barn = new ArrayList<Animal>();
+        ArrayList<Animal> animalFarm = new ArrayList<Animal>();
+        animalFarm.add(new Animal());
+        animalFarm.add(new Animal("Caw caw"));
+        animalFarm.add(new Cow());
 
-        for (Animal cuz : barn) 
+        for (Animal cuz : animalFarm) 
         {
             System.out.println(cuz.speak());
+            System.out.println(cuz.eat());
 
-            if(cuz.getAge()>10)
-            {
-                cuz.kill();
+            //More common but more generic
+            if(cuz instanceof Cow){
+                System.out.println(((Cow)cuz).produceMilk(5));
+            }
+
+            //Less common but more specific
+            if(cuz.getClass() == Cow.class){
+                System.out.println("This is a cow");
             }
         }
+
+        
     }
 
 
